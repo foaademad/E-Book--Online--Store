@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src/css/navbar.css">
+    <link rel="stylesheet" href="src/css/shopcart.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/home.css">
+    <link rel="stylesheet" href="src/css/checkout.css">
+
+
+    <!-- Add Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.min.css"
+        integrity="sha512-k+xZuzf4IaGQK9sSDjaNyrfwgxBfoF++7u6Q0ZVUs2rDczx9doNZkYXyyQbnJQcMR4o+IjvAcIj69hHxiOZEig=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="js/cart.js"></script> -->
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="100">
+    <div class="top-bar py-2 text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-4">
+                    <a href="tel:+208-6666-0112">
+                        <i class="fas fa-phone me-2"></i>
+                        +208-6666-0112
+                    </a>
+                </div>
+                <div class="col-4 text-center">
+                    <a href="mailto:info@example.com">
+                        <i class="fas fa-envelope me-2"></i>
+                        info@example.com
+                    </a>
+                </div>
+                <div class="col-4 text-end">
+                    <span>
+                        <i class="far fa-clock me-2"></i>
+                        Sunday - Fri: 9 AM - 6 PM
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="/home.html">
+                <i class="fas fa-book-reader me-2"></i>BookHaven
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active  position-relative" href="./home.html">Home</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link position-relative " href="./categiores.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item not-authenticated">
+                        <a class="nav-link position-relative" href="sign-in.html">Sign In</a>
+                    </li>
+                    <li class="nav-item not-authenticated">
+                        <a class="nav-link btn btn-primary-custom" href="sign-up.html">Sign Up</a>
+                    </li>
+    
+                    <li class="nav-item  authenticated">
+                        <a class="nav-link position-relative" href="./userprofile.html" role="button">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item ms-2 authenticated">
+                        <a class="nav-link position-relative" href="./Cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count">
+                                0
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="breadcrumb-wrapper">
+        <div class="book1">
+            <img src="src/images/book1.png" alt="book">
+        </div>
+        <div class="book2">
+            <img src="src/images/book2.png" alt="book">
+        </div>
+        <div class="container3">
+            <div class="page-heading">
+                <h1>WELCOME TO CART</h1>
+                <div class="page-header">
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                        <li>
+                            <a href="home.html" class="text-decoration-none text-secondary">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <i class=" fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li>
+                           Cart
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- cart table  -->
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-table">
+
+                    </tbody>
+                </table>
+
+                <div class="row mt-4 mb-4">
+                    <div class="col-12 d-flex justify-content-evenly">
+
+                        <button type="button"  class="btn-primary-custom  btn-lg btn-block ">
+                            <a style="text-decoration: none; color: white;" href="./categiores.html"> Add More Books</a>
+                           
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!------------------------  cart total------------------- -->
+            <div class="col-lg-4 my-20">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center border-bottom">Cart Total</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center ">
+                                Total Bill
+                                <span class="cart-total-bill">$0.00</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center ">
+                                Shipping
+                                <span class="cart-shipping">$5.00</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>Total amount</strong>
+                                </div>
+                                <span class="cart-total-amount"><strong>$0.00</strong></span>
+                            </li>
+                        </ul>
+                            <a href="checkout.html" style="text-decoration: none; color: white;" > <button type="button" class="text-decoration-none  btn-primary-custom "id="checkout"  >
+                            Go to checkout
+                        </button></a> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-info">
+                            <div class="footer-brand">
+                                <i class="fas fa-book-reader me-2"></i>
+                                <span>BookHaven</span>
+                            </div>
+                            <p class="footer-description">
+                                Your ultimate destination for discovering amazing books. We're
+                                passionate about connecting readers with their next favorite
+                                story.
+                            </p>
+                            <div class="social-links">
+                                <a href="#" class="social-icon" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-links">
+                            <h4 class="footer-title">Quick Links</h4>
+                            <ul class="footer-menu">
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#featured">Featured Books</a></li>
+                                <li><a href="#categories">Categories</a></li>
+                                <!-- <li><a href="sign-in.html">Sign In</a></li>
+                            <li><a href="sign-up.html">Sign Up</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-links">
+                            <h4 class="footer-title">Visitors</h4>
+                            <ul class="footer-menu">
+                                <li><a href="Cart.html">CART</a></li>
+                                <li><a href="userprofile.html">Profile</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-links">
+                            <h4 class="footer-title">Contact Us</h4>
+                            <ul class="footer-contact">
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>123 Book Street, Reading City, RC 12345</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:info@bookhaven.com">info@bookhaven.com</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone"></i>
+                                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="copyright">
+                            &copy; 2024 BookHaven. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-legal">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-------------------------------------------- end footer ------------------------------------------->
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.min.js"
+        integrity="sha512-0Yc4Jv5wX4+mjDuLxmHFGqgDtMFAEBLpPq/0nPVmAOwHPMkYXiS1YVYWTcrVQztftk/32089DDTyrCJO8hBCZw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            $(document).ready(async function () {
+
+                // Function to calculate the total price of items in the cart
+                function calculateTotal() {
+                    let total = 0;
+                    cart.forEach((item) => {
+                        total += item.price * item.quantity;
+                    });
+                    return total;
+                }
+                // Cart Management
+
+
+                function updateCartCount() {
+                    const count = cart?.reduce((total, item) => total + item.quantity, 0) || 0;
+                    $(".cart-count").text(count);
+
+                    // Update checkout button state
+                    const total = calculateTotal();
+                    $(".checkout-btn").prop("disabled", count === 0);
+
+                    // Show/hide empty cart message
+                    if (count === 0) {
+                        $("#emptyCart").show();
+                        $("#cartItems").hide();
+                        $(".cart-footer").hide();
+                    } else {
+                        $("#emptyCart").hide();
+                        $("#cartItems").show();
+                        $(".cart-footer").show();
+                    }
+                }
+
+
+                function calculateTotal() {
+                    const total = cart?.reduce(
+                        (sum, item) => sum + item.price * item.quantity,
+                        0
+                    ) || 0;
+                    $(".total-amount").text(`${total?.toFixed(2)}`);
+                    return total;
+                }
+
+                function updateCartDisplay() {
+                    const cartItems = $("#cartItems");
+                    cartItems.empty();
+
+                    cart?.forEach((item) => {
+                        cartItems.append(`
+                                <div class="cart-item" data-id="${item.id}">
+                                    <div class="cart-item-image">
+                                        <img src="${item.image}" alt="${item.title}">
+                                    </div>
+                                    <div class="cart-item-details">
+                                        <h6 class="cart-item-title">${item.title}</h6>
+                                        <p class="cart-item-price">${item.price}</p>
+                                        <div class="cart-item-quantity">
+                                            <button class="btn btn-sm btn-outline-secondary decrease-quantity">-</button>
+                                            <span class="quantity-value">${item.quantity}</span>
+                                            <button class="btn btn-sm btn-outline-secondary increase-quantity">+</button>
+                                            <button class="btn btn-sm btn-outline-danger ms-2 remove-item">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            `);
+                    });
+
+                    updateCartCount();
+                    calculateTotal();
+                    console.log(filterdUser?.cart);
+                    if (currentUser) {
+                        const updatedUsers = users.map(user =>
+                            user.email === filterdUser.email ? filterdUser : user
+                        );
+                        localStorage.setItem("users", JSON.stringify(updatedUsers));
+                        localStorage.setItem("currentUser", JSON.stringify(filterdUser));
+                    }
+                }
+
+
+                // Quantity Controls
+                $(document).on("click", ".increase-quantity", function () {
+                    const cartItem = $(this).closest(".cart-item");
+                    const id = parseInt(cartItem.data("id"));
+                    const item = cart.find((item) => item.id === id);
+                    if (item) {
+                        item.quantity += 1;
+                        updateCartDisplay();
+
+                    }
+                });
+
+                $(document).on("click", ".decrease-quantity", function () {
+                    const cartItem = $(this).closest(".cart-item");
+                    const id = parseInt(cartItem.data("id"));
+                    const item = cart.find((item) => item.id === id);
+                    if (item && item.quantity > 1) {
+                        item.quantity -= 1;
+
+                        updateCartDisplay();
+
+                    }
+                });
+
+                // Remove Item
+                $(document).on("click", ".remove-item", function () {
+                    const cartItem = $(this).closest(".cart-item");
+                    const id = parseInt(cartItem.data("id"));
+                    const removedItem = cart.find((item) => item.id === id);
+                    cart = cart.filter((item) => item.id !== id);
+                    filterdUser.cart = cart;
+                    updateCartDisplay();
+                    // // Show removal toast
+                    // Toastify({
+                    //     text: `${removedItem.title} has been removed from your cart!`,
+                    //     duration: 3000,
+                    //     gravity: "bottom",
+                    //     position: "right",
+                    //     backgroundColor: "#dc3545",
+                    //     stopOnFocus: true
+                    // }).showToast();
+
+
+                });
+
+                updateCartDisplay();
+
+            });
+            // Initialize Reviews Swiper
+        </script>
+        <script src="js/cart.js"></script>
+        <script src="js/Nav.js"></script>
+
+
+
+</body>
+
+</html>

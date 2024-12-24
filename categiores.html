@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="src/css/variables.css">
+  <link rel="stylesheet" href="src/css/global.css">
+  <link rel="stylesheet" href="src/css/home.css">
+  <link rel="stylesheet" href="src/css/categiores.css">
+  <link rel="stylesheet" href="src/css/navbar.css">
+<link rel="stylesheet" href="src/css/footer.css">
+<link rel="stylesheet" href="src/css/checkout.css">
+
+
+  
+  <!-- Add Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="100">
+
+    <!-- Top Bar -->
+    <div class="top-bar py-2 text-white">
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-md-4">
+                  <a href="tel:+208-6666-0112">
+                      <i class="fas fa-phone me-2"></i>
+                      +208-6666-0112
+                  </a>
+              </div>
+              <div class="col-md-4 text-center">
+                  <a href="mailto:info@example.com">
+                      <i class="fas fa-envelope me-2"></i>
+                      info@example.com
+                  </a>
+              </div>
+              <div class="col-md-4 text-end">
+                  <span>
+                      <i class="far fa-clock me-2"></i>
+                      Sunday - Fri: 9 AM - 6 PM
+                  </span>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="/home.html">
+                <i class="fas fa-book-reader me-2"></i>BookHaven
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link  position-relative" href="./home.html">Home</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link position-relative active" href="#">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item not-authenticated">
+                        <a class="nav-link position-relative" href="sign-in.html">Sign In</a>
+                    </li>
+                    <li class="nav-item not-authenticated">
+                        <a class="nav-link btn btn-primary-custom" href="sign-up.html">Sign Up</a>
+                    </li>
+                   
+                    <li class="nav-item  authenticated">
+                        <a class="nav-link position-relative" href="./userprofile.html" role="button">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item ms-2 authenticated">
+                        <a class="nav-link position-relative" href="./Cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count">
+                                0
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <!-- -----------------------end nav------------------ -->
+
+   <!-- -----------------------start Category------------------ -->
+  
+   <div class="breadcrumb-wrapper">
+    <div class="book1">
+        <img src="src/images/book1.png" alt="book">
+    </div>
+    <div class="book2">
+        <img src="src/images/book2.png" alt="book">
+    </div>
+    <div class="container3">
+        <div class="page-heading">
+            <h1>WELCOME TO Category</h1>
+            <div class="page-header">
+                <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    <li>
+                        <a href="home.html" class="text-decoration-none text-secondary">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <i class=" fa-solid fa-chevron-right"></i>
+                    </li>
+                    <li>
+                       Category
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------------end Category------------------ -->
+
+<br>
+<br>
+<br>
+
+<!-----------------------start results------------------ -->
+
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-12 col-md-12">
+      <div class="results-container">
+        <div class="results-header d-flex justify-content-between align-items-center">
+    <div class="results-count">
+      Showing <span id="results-range">1-6</span> of <span id="total-results">6</span> results
+    </div>
+    <div class="results-controls d-flex align-items-center">
+      <select class="form-select me-3" id="sort-select" onchange="sortResults(this.value)">
+          <option value="">Default sorting</option>
+          <option value="name-asc">Name (A-Z)</option>
+          <option value="name-desc">Name (Z-A)</option>
+          <option value="price-asc">Price (Low to High)</option>
+          <option value="price-desc">Price (High to Low)</option>
+      </select>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+  
+<!-----------------------end results------------------ -->
+<br>
+<br>
+<br>
+
+
+
+<!-----------------------start sidebar and books------------------ -->
+<div class="container-fluid mt-1">
+  <div class="row">
+    <!-- Sidebar Column -->
+    <div class="col-12 col-md-3">
+      <div class="sidebar">
+        <h3>Search by Book Name</h3>
+        <div class="search-bar mb-4">
+            <input type="text" id="book-search" placeholder="Enter book name" oninput="searchBooks()">
+        </div>
+        
+    
+        <h3>Categories</h3>
+        <div class="categories">
+            <a href="#" class="active">All Books</a>
+            <a href="#">Business</a>
+            <a href="#">Marketing</a>
+            <a href="#">Design</a>
+            <a href="#">Programming</a>
+        </div>
+
+        <h3>Product Status</h3>
+        <div class="dropdown">
+            <select id="status" onchange="filterProductStatus()">
+                <option value="all">All</option>
+                <option value="in">In Stock</option>
+                <option value="out">Out of Stock</option>
+            </select>
+        </div>
+   
+        <h3>Filter By Price</h3>
+        <div class="price-slider">
+            <input type="range" id="price-min" min="10" max="1000" value="10" oninput="updatePriceDisplay()">
+            <input type="range" id="price-max" min="10" max="1000" value="1000" oninput="updatePriceDisplay()">
+        </div>
+        <br>
+        <div class="price-display" id="pr">
+          <button id="filter-button">Filter</button>
+          Price: $<span id="price-min-display">100</span> - $<span id="price-max-display">1000</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Books Column -->
+    <div class="col-12 col-md-9">
+      <div id="results-content" class="mt-4">
+        <div class="bookgrid">
+          <!-- Books will be dynamically inserted here by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<!-----------------------end sidebar and books------------------ -->
+
+<!-------------------------------------------- start Navigation ------------------------------------------>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link" href="#" onclick="changePage(currentPage - 1)">Previous</a>
+    </li>
+    <li class="page-item active"><a class="page-link" href="#" onclick="changePage(1)">1</a></li>
+    <li class="page-item"><a class="page-link" href="#" onclick="changePage(2)">2</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" onclick="changePage(currentPage + 1)">Next</a>
+    </li>
+  </ul>
+</nav>
+
+<!-------------------------------------------- end Navigation ------------------------------------------>
+
+
+<!-------------------------------------------- start footer ----------------------------------------->
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+      <div class="footer-content">
+          <div class="row g-4">
+              <div class="col-lg-4 col-md-6">
+                  <div class="footer-info">
+                      <div class="footer-brand">
+                          <i class="fas fa-book-reader me-2"></i>
+                          <span>BookHaven</span>
+                      </div>
+                      <p class="footer-description">Your ultimate destination for discovering amazing books. We're passionate about connecting readers with their next favorite story.</p>
+                      <div class="social-links">
+                          <a href="#" class="social-icon" aria-label="Facebook">
+                              <i class="fab fa-facebook-f"></i>
+                          </a>
+                          <a href="#" class="social-icon" aria-label="Twitter">
+                              <i class="fab fa-twitter"></i>
+                          </a>
+                          <a href="#" class="social-icon" aria-label="Instagram">
+                              <i class="fab fa-instagram"></i>
+                          </a>
+                          <a href="#" class="social-icon" aria-label="LinkedIn">
+                              <i class="fab fa-linkedin-in"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-2 col-md-6">
+                  <div class="footer-links">
+                      <h4 class="footer-title">Quick Links</h4>
+                      <ul class="footer-menu">
+                          <li><a href="#home">Home</a></li>
+                          <li><a href="#featured">Featured Books</a></li>
+                          <li><a href="#categories">Categories</a></li>
+                          <li><a href="sign-in.html">Sign In</a></li>
+                          <li><a href="sign-up.html">Sign Up</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <div class="footer-links">
+                      <h4 class="footer-title">Categories</h4>
+                      <ul class="footer-menu">
+                          <li><a href="#">Fiction</a></li>
+                          <li><a href="#">Non-Fiction</a></li>
+                          <li><a href="#">Children's Books</a></li>
+                          <li><a href="#">Academic</a></li>
+                          <li><a href="#">Self-Help</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <div class="footer-links">
+                      <h4 class="footer-title">Contact Us</h4>
+                      <ul class="footer-contact">
+                          <li>
+                              <i class="fas fa-map-marker-alt"></i>
+                              <span>123 Book Street, Reading City, RC 12345</span>
+                          </li>
+                          <li>
+                              <i class="fas fa-envelope"></i>
+                              <a href="mailto:info@bookhaven.com">info@bookhaven.com</a>
+                          </li>
+                          <li>
+                              <i class="fas fa-phone"></i>
+                              <a href="tel:+1234567890">+1 (234) 567-890</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <div class="row">
+              <div class="col-md-6">
+                  <p class="copyright">&copy; 2024 BookHaven. All rights reserved.</p>
+              </div>
+              <div class="col-md-6">
+                  <ul class="footer-legal">
+                      <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Terms of Service</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<!-------------------------------------------- end footer ------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(async function () {
+
+        // Function to calculate the total price of items in the cart
+        function calculateTotal() {
+            let total = 0;
+            cart.forEach((item) => {
+                total += item.price * item.quantity;
+            });
+            return total;
+        }
+        // Cart Management
+
+
+        function updateCartCount() {
+            const count = cart?.reduce((total, item) => total + item.quantity, 0) || 0;
+            $(".cart-count").text(count);
+
+            // Update checkout button state
+            const total = calculateTotal();
+            $(".checkout-btn").prop("disabled", count === 0);
+
+            // Show/hide empty cart message
+            if (count === 0) {
+                $("#emptyCart").show();
+                $("#cartItems").hide();
+                $(".cart-footer").hide();
+            } else {
+                $("#emptyCart").hide();
+                $("#cartItems").show();
+                $(".cart-footer").show();
+            }
+        }
+
+
+        function calculateTotal() {
+            const total = cart?.reduce(
+                (sum, item) => sum + item.price * item.quantity,
+                0
+            ) || 0;
+            $(".total-amount").text(`${total?.toFixed(2)}`);
+            return total;
+        }
+
+        function updateCartDisplay() {
+            const cartItems = $("#cartItems");
+            cartItems.empty();
+
+            cart?.forEach((item) => {
+                cartItems.append(`
+                        <div class="cart-item" data-id="${item.id}">
+                            <div class="cart-item-image">
+                                <img src="${item.image}" alt="${item.title}">
+                            </div>
+                            <div class="cart-item-details">
+                                <h6 class="cart-item-title">${item.title}</h6>
+                                <p class="cart-item-price">${item.price}</p>
+                                <div class="cart-item-quantity">
+                                    <button class="btn btn-sm btn-outline-secondary decrease-quantity">-</button>
+                                    <span class="quantity-value">${item.quantity}</span>
+                                    <button class="btn btn-sm btn-outline-secondary increase-quantity">+</button>
+                                    <button class="btn btn-sm btn-outline-danger ms-2 remove-item">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `);
+            });
+
+            updateCartCount();
+            calculateTotal();
+            console.log(filterdUser?.cart);
+            if (currentUser) {
+                const updatedUsers = users.map(user =>
+                    user.email === filterdUser.email ? filterdUser : user
+                );
+                localStorage.setItem("users", JSON.stringify(updatedUsers));
+                localStorage.setItem("currentUser", JSON.stringify(filterdUser));
+            }
+        }
+
+        
+        // Quantity Controls
+        $(document).on("click", ".increase-quantity", function () {
+            const cartItem = $(this).closest(".cart-item");
+            const id = parseInt(cartItem.data("id"));
+            const item = cart.find((item) => item.id === id);
+            if (item) {
+                item.quantity += 1;
+                updateCartDisplay();
+
+            }
+        });
+
+        $(document).on("click", ".decrease-quantity", function () {
+            const cartItem = $(this).closest(".cart-item");
+            const id = parseInt(cartItem.data("id"));
+            const item = cart.find((item) => item.id === id);
+            if (item && item.quantity > 1) {
+                item.quantity -= 1;
+
+                updateCartDisplay();
+
+            }
+        });
+
+        // Remove Item
+        $(document).on("click", ".remove-item", function () {
+            const cartItem = $(this).closest(".cart-item");
+            const id = parseInt(cartItem.data("id"));
+            const removedItem = cart.find((item) => item.id === id);
+            cart = cart.filter((item) => item.id !== id);
+            filterdUser.cart = cart;
+            updateCartDisplay();
+            // Show removal toast
+            Toastify({
+                text: `${removedItem.title} has been removed from your cart!`,
+                duration: 3000,
+                gravity: "bottom",
+                position: "right",
+                backgroundColor: "#dc3545",
+                stopOnFocus: true
+            }).showToast();
+
+
+        });
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        const fetchBooks = async () => {
+            try {
+                const response = await fetch("src/js/books.json");
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                if (!data || Object.keys(data).length === 0) {
+                    throw new Error('Invalid or empty JSON response');
+                }
+
+                // Get one book from each category
+                const selectedBooks = [
+                    data.business[0],
+                    data.marketing[0],
+                    data.design[0],
+                    data.programming[0]
+                ];
+
+                return selectedBooks;
+            } catch (error) {
+                console.error("Error fetching books:", error);
+                return []; // Return empty array since the JSON fetch failed
+            }
+        };
+        const books = await fetchBooks();
+
+        // Initialize cart display
+        updateCartDisplay();
+        // Add to Cart Button Click Handler
+        $(document).on("click", ".add-to-cart", function () {
+            if (!currentUser) {
+                Toastify({
+                    text: "Please sign in to add items to your cart.",
+                    duration: 3000,
+                    gravity: "bottom",
+                    position: "right",
+                    backgroundColor: "#dc3545",
+                    stopOnFocus: true
+                }).showToast(); return;
+            }
+            if (currentUser?.role === "admin") {
+                Toastify({
+                    text: "You are not allowed to add items to your cart.",
+                    duration: 3000,
+                    gravity: "bottom",
+                    position: "right",
+                    backgroundColor: "#dc3545",
+                    stopOnFocus: true
+                }).showToast(); return;
+            }
+            const bookCard = $(this).closest(".book-card");
+            const bookId = parseInt(bookCard.data("id"));
+            const book = books.find((b) => b.id === bookId);
+
+            if (book) {
+                const existingItem = cart.find((item) => item.id === bookId);
+
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({
+                        ...book,
+                        quantity: 1,
+                    });
+                }
+                //#.com
+                // Show success toast
+                Toastify({
+                    text: `${book.title} has been added to your cart!`,
+                    duration: 3000,
+                    gravity: "bottom",
+                    position: "right",
+                    backgroundColor: "#28a745",
+                    stopOnFocus: true
+                }).showToast();
+                updateCartDisplay();
+
+            }
+        });
+
+        // Initialize Swiper
+         });
+    // Initialize Reviews Swiper
+  </script>
+<script src="src/js/categories.js"></script>
+
+<script src="./js/Nav.js"></script>
+
+
+</body>
+</html>

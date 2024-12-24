@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/sellerDashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- Chart.js Library -->
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     <!-- JavaScript Code -->
+      <script src="js/seller.js"></script>
+     <!-- <script>
+         document.addEventListener("DOMContentLoaded", function() {
+             const ctx = document.getElementById('salesChart').getContext('2d');
+             const topSellingProducts = [];
+             const topSellingProductsSales = [];
+             fetch('https://fakestoreapi.com/products?limit=6')
+                 .then(res => res.json())
+                 .then(data => {
+                     data.forEach(product => {
+                         topSellingProducts.push(product.title);
+                         topSellingProductsSales.push(product.price);
+                     });
+                     const salesChart = new Chart(ctx, {
+                         type: 'bar', // Change to 'line', 'pie', etc., if needed
+                         data: {
+                             labels: topSellingProducts,
+                             datasets: [{
+                                 label: 'Monthly Sales ($)',
+                                 data: topSellingProductsSales,
+                                 backgroundColor: [
+                                     'rgba(255, 99, 132, 0.2)',
+                                     'rgba(54, 162, 235, 0.2)',
+                                     'rgba(255, 206, 86, 0.2)',
+                                     'rgba(75, 192, 192, 0.2)',
+                                     'rgba(153, 102, 255, 0.2)',
+                                     'rgba(255, 159, 64, 0.2)'
+                                 ],
+                                 borderColor: [
+                                     'rgba(255, 99, 132, 1)',
+                                     'rgba(54, 162, 235, 1)',
+                                     'rgba(255, 206, 86, 1)',
+                                     'rgba(75, 192, 192, 1)',
+                                     'rgba(153, 102, 255, 1)',
+                                     'rgba(255, 159, 64, 1)'
+                                 ],
+                                 borderWidth: 1
+                             }]
+                         },
+                         options: {
+                             scales: {
+                                 y: {
+                                     beginAtZero: true
+                                 }
+                             }
+                         }
+                     });
+                 });
+         });
+     </script> -->
+
+
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2 class="text-center py-3">Seller Dashboard</h2>
+        <a href="#products">Manage Products</a>
+        <a href="#orders">Manage Orders</a>
+        <a href="#analytics">Sales Analytics</a>
+        <a href="home.html">Back to home</a>
+    </div>
+
+    <!-- Content Area -->
+    <div class="content">
+        <h1 class="mb-4">Welcome</h1>
+
+        <!-- Products Section -->
+        <section id="products" class="mb-5">
+            <h2>Manage Products</h2>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead class="table-secondary">
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Price</th>
+                            <th>category</th>
+                            <th>pages</th>
+                            <th>Images</th>
+                            <th>discription</th>
+                            <th>Stock</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <button id="addProductBtn" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                Add New Book
+            </button>
+            <!-- <button class="btn btn-primary mb-3">Add New Product</button> -->
+        </section>
+
+
+
+        <!-- Add Product Modal -->
+        <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="addProductForm">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="editProductId">
+                    <div class="mb-3">
+                    <label for="productName" class="form-label">Book Name</label>
+                    <input type="text" class="form-control" id="productName" placeholder="Enter product name" required>
+                    </div>
+                    <div class="mb-3">
+                    <label for="Author" class="form-label">Author</label>
+                    <input type="text" class="form-control" id="Author" placeholder="Enter Author name" required>
+                    </div>
+                    <div class="mb-3">
+                    <label for="productPrice" class="form-label">Price</label>
+                    <input type="text" class="form-control" id="productPrice" placeholder="Enter product price" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="productCategory" class="form-label">Category</label>
+                        <select class="form-control" id="productCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="business">Business</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="design">Design</option>
+                            <option value="programming">Programming</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                    <label for="productPages" class="form-label">Pages</label>
+                    <input type="number" class="form-control" id="productPages" placeholder="Enter number of pages" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="productImage">Image URL</label>
+                        <input type="text" id="productImage" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="productImage2">Back Image URL</label>
+                        <input type="text" id="productImage2" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                    <label for="productDescription" class="form-label">Description</label>
+                    <textarea class="form-control" id="productDescription" rows="3" placeholder="Enter product description" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                    <label for="productStock" class="form-label">Stock</label>
+                    <input type="text" class="form-control" id="productStock" placeholder="Enter stock quantity" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+                </form>
+            </div>
+            </div>
+        </div>
+
+
+        <!-- Orders Section -->
+        <section id="orders" class="mb-5">
+            <h2>Manage Orders</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="table-secondary">
+                        <tr>
+                            <th>#</th>
+                            <th>Customer</th>
+                            <th>number of books</th>
+                            <!-- <th>Status</th> -->
+                            <th>Total prices</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <script>
+            
+        </script>
+        </section>
+
+            <!-- Analytics Section -->
+        <section id="analytics" class="mb-5">
+            <h2>Sales Analytics</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <div class="card text-center text-white shadow-card-1">
+                        <div class="card-body">
+                            <h3>$2,500</h3>
+                            <p>Total Sales</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <div class="card text-center text-white shadow-card-2">
+                        <div class="card-body">
+                            <h3>150</h3>
+                            <p>Total Orders</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <div class="card text-center text-white shadow-card-3">
+                        <div class="card-body">
+                            <h3>50</h3>
+                            <p>Top-Selling Products</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add a chart canvas -->
+            <div class="mt-5">
+                <!-- <canvas id="salesChart"></canvas> -->
+                <canvas id="salesChart" width="170px" height="70px"></canvas>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
