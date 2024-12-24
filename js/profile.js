@@ -1,22 +1,3 @@
-// document.querySelector("form").addEventListener("submit", function (event) {
-//   event.preventDefault();
-
-//   const currentPassword = document.getElementById("current-password").value;
-//   const newPassword = document.getElementById("new-password").value;
-  // const confirmPassword = document.getElementById("confirm-password").value;
-
-//   if (!currentPassword || !newPassword || !confirmPassword) {
-//     alert("All fields are required!");
-//     return;
-//   }
-
-//   if (newPassword !== confirmPassword) {
-//     alert("New password and confirm password do not match!");
-//     return;
-//   } 
-
-//   alert("Password changed successfully!");
-// });
 
 // Select all sidebar links and sections
 const sidebarLinks = document.querySelectorAll(".profile-links a");
@@ -41,15 +22,21 @@ sidebarLinks.forEach((link, index) => {
 });
 // =================================================================================================
 
+
+
 // fetech the imformation log file and show it
 const currentUser = JSON.parse(localStorage.getItem("currentUser")) || {};
 const users = JSON.parse(localStorage.getItem("users"));
 
 // عرض الاسم في الحقل #username باستخدام firstName و lastName
-if (currentUser.firstName || currentUser.lastName) {
-    document.querySelector("#username").innerText = (currentUser.firstName || "") + " " + (currentUser.lastName || "");
-} else {
-    document.querySelector("#username").innerText = "";
+function updateUsernameDisplay() {
+    const currentUser = JSON.parse(localStorage.getItem("currentUser")) || {};
+    const usernameElement = document.querySelector("#username");
+    if (currentUser.firstName || currentUser.lastName) {
+        usernameElement.innerText = (currentUser.firstName || "") + " " + (currentUser.lastName || "");
+    } else {
+        usernameElement.innerText = "Guest"; // إذا لم تكن هناك بيانات، يتم عرض "Guest" أو أي نص افتراضي
+    }
 }
 
 // عرض الاسم في الحقول first-name و last-name
@@ -76,7 +63,8 @@ updateBtn.addEventListener("click", function () {
     saveBtn.style.display = "inline-block";
     cancelBtn.style.display = "inline-block";
 });
-
+    // تحديث عرض اسم المستخدم تلقائيًا
+    updateUsernameDisplay();
 saveBtn.addEventListener("click", function () {
     const firstName = document.getElementById("first-name").value.trim();
     const lastName = document.getElementById("last-name").value.trim();
@@ -173,8 +161,13 @@ saveBtn.addEventListener("click", function () {
         cancelBtn.style.display = "none";
         updateBtn.style.display = "inline-block";
     }
+    // تحديث عرض اسم المستخدم تلقائيًا
+    updateUsernameDisplay();
 });
 
+window.addEventListener("storage", function () {
+    updateUsernameDisplay(); // يتم تحديث اسم المستخدم تلقائيًا عند تغيير البيانات في LocalStorage
+});
 cancelBtn.addEventListener("click", function () {
     // استرجاع البيانات القديمة من localStorage
     const currentUser = JSON.parse(localStorage.getItem("currentUser")) || {};
